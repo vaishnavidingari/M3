@@ -1,0 +1,244 @@
+Q. ____________   interface shoule be used when the query result type is unknown or when a query returns polymorphic results .
+1). TypedQuery
+2). Query
+3). EntityManager
+4). Non of the above
+Solution :
+option [2] is correc
+
+Q. @Entity
+public class Employee ….. {
+ @Id
+ private int empId;
+ private String name;
+ @OneToOne
+ private Address address;
+}
+
+@Entity
+public class Address ….. {
+ @Id
+ private int addressId;
+ private String street;
+ private String city;
+ private String state;
+ private String zipcode;}
+Which of the given statement is true about above code?
+1). It represents unidirectional one-to-one relationship
+2). It represents bidirectional one-to-one relationship
+3). It represents bidirectional one-to-many relationship
+4). None of these
+Solution :
+option [1] is correct
+
+
+Q. What is true about the following code:
+
+@OneToMany(mappedBy="department") 
+ public Collection<Employee> getEmployees() { 
+ return employee; 
+ } 
+1). Department has a field called “Employee”, that has a one-to-many relationship
+2). Each “department” has one or more “Employee”
+ 
+3). Each “Employee” has one or more “department”
+4). None of these
+Solution :
+option [1,2] are correct
+
+
+Q. State whether below given statements are true or false: 
+Statement 1-            JPQL is a platform-independent object-oriented query language defined as part of the Java Persistence API (JPA) specification.
+
+Statement 2 - JPQL works with relational database Table not java classes .
+1). True    True
+2). True    False
+3). False   True
+4). False    False
+Solution :
+option [2] is correct
+
+
+Q. State whether below given statements are true or false: 
+Statement 1-            JPQL is a platform-independent object-oriented query language defined as part of the Java Persistence API (JPA) specification.
+
+Statement 2 - JPQL works with relational database Table not java classes .
+1). True    True
+2). True    False
+3). False   True
+4). False    False
+Solution :
+option [2] is correct
+
+
+Q. Which of the given below are valid cascade types?
+1). Detach
+2). Merge
+3). Insert
+4). Remove
+5). All
+Solution :
+option [1,2,4,5] are correct
+
+
+Q. Which of the given syntax is correct to use Named Queries?
+1). @Entity
+@Table(name = "books")
+@NamedQueries(
+@NamedQuery(name = "getAllBooks", query = "SELECT book FROM Book book"))
+public class Book implements Serializable {  ………….. }
+2). @Entity
+@Table(name = "books")
+@NamedQueries(
+name = "getAllBooks", query = "SELECT book FROM Book book")
+public class Book implements Serializable {  ………….. }
+3). @Entity
+@Table(name = "books")
+@NamedQueries(
+@NamedQuery(name = "getAllBooks", query = "SELECT book FROM Book book"))
+public class Book {  ………….. }
+4). @Entity
+@Table(name = "books")
+@NamedQuery(
+@NamedQueries(name = "getAllBooks", query = "SELECT book FROM Book book"))
+public class Book implements Serializable {  ………….. }
+Solution :
+option [1] is correct
+
+
+Q. Query interface shoule be used in which of the following case as per JPA 2 recommendations?
+1). When specific query result type is expected
+2). When query result type is unknown
+3). When query result contains more than one object
+4). When query result contains only one object
+Solution :
+option [2] is correct
+
+
+Q. Which of the following entitymanager method is used to locate single entity only based on primary key value .
+1). search()
+2). locate()
+3). flush()
+4). find()
+Solution :
+option [4] is correct
+
+
+
+Q. Which of the below given strategies JAP allows for hierarchical classes to be mapped with tables?
+1). InheritanceType.SINGLE_TABLE
+2). InheritanceType.
+TABLE_PER_CLASS
+3). InheritanceType.JOINED
+4). All of the above
+Solution :
+option [4] is correct
+
+
+
+Q. How can we represent the Many to Many Entity relationship in JPA?
+1). javax.persistence.ManyToMany
+2). javax.persistence.Entity
+3). javax.persistence.Table
+4). javax.hibernate.ManyToMany
+Solution :
+option [1] is correct
+
+
+Q. Choose the correct instance states of persistent class.
+1). Managed
+2). New
+3). Detached
+4). Removed
+5). All of the above
+Solution :
+option [5] is correct
+
+
+
+
+Q. What is the use of  @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+1). JPA decides which generator type to use, based on the database’s support for primary key generation.
+2). The database is responsible for determining and assigning the next primary key.
+3). This type keeps a separate table with the primary key values. 
+4). All of Above
+Solution :
+option [2] is correct
+
+
+Q. Select the correct statement?
+1). JPA need ORM implementation to work
+2). ORM framework that can use with JPA are TopLink,OpenJPA & Hibernate
+3). JPA is database
+4). All of Above
+Solution :
+option [1,2] are correct
+
+Q. Select the correct statement for @Entity?
+1). This Annotation marks the class as an entity bean
+2). This Annotation marks the bean as primary key
+3). Used to create SEQUENCE column type
+4). All of Above
+Solution :
+option [1] is correct
+
+
+Q. What is the use of EntityManagerFactory class?
+1). Designed to create EntityManager. 
+2). Designed to create Persistance. 
+3). Responsible for creating EntityManager instance. It is obtained using Persistence class's createEntityManagerFactory static method. 
+4). Designed to create Entity. 
+Solution :
+option [1,3] are correct
+
+
+
+Q. State whether below given statements are true or false:
+
+Statement 1-  The EntityManager is the primary interface used by application developers to interact with the JPA runtime. 
+
+Statement 2 - EntityManagerFactory instance  manage entity objects which required to be persisted. 
+1). True , True
+2). True , False
+3). False , True
+4). False , False
+Solution :
+option [2] is correct
+
+
+Q. What is the use of "contains" EntityManager  method
+1). Returns true if the entity instance is in the persistence context. This signifies that the entity instance is managed
+2). Clears the entities from the persistence context
+3). Persists the entity object
+4). Detaches an entity from the persistence context
+Solution :
+option [1] is correct
+
+
+
+Q. In which of the Following persistence life cycle state the object is not yet associated with an Entity Manager 
+1). Managed
+2). New
+3). Detached
+4). Removed
+Solution :
+option [2] is correct
+
+
+
+Q. What are the advantages of JPA? Select the correct options.
+1). Database independent.
+2). Concurrency support.
+3). Easy maintenance and increases productivity
+4). All of Above
+Solution :
+option [4] is correct
+
+
+Q. Which of the following are elements in persistence.xml
+1). <persistence-unit> 
+2). <class> 
+3). <hibernate>
+4). <opengl>
+Solution :
+option [1,2] are correct
